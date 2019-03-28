@@ -3,18 +3,10 @@
     /// <summary>
     ///     Скрытая реализация представления об отделе предприятия.
     /// </summary>
-    internal struct Department : IDepartment
+    internal struct Department
     {
         /*
          * TODO #2: Реализуйте интерфейс IDepartment для структуры Department
          */
-
-        public string Name { get; }
-
-        public Department(string name)
-        {
-            Name = name;
-        }
-
     }
 }

@@ -1,34 +1,12 @@
-﻿using Practice.HR.Events;
-using System;
-
-namespace Practice.HR
+﻿namespace Practice.HR
 {
     /// <summary>
     ///     Скрытая реализация представления о клиенте.
     /// </summary>
-    internal class Client : AbstractPerson, IClient
+    internal class Client : AbstractPerson
     {
         /*
          * TODO #4: Реализуйте интерфейс IClient для класса Client
          */
-
-        private float _discount;
-
-        public float Discount
-        {
-            get
-            {
-                return _discount;
-            }
-
-            set
-            {
-                var args = new ValueChangeEventArgs<float>(_discount);
-                _discount = value;
-                DiscountChange?.Invoke(this, args);
-            }
-        }
-
-        public event EventHandler<ValueChangeEventArgs<float>> DiscountChange;
     }
 }
